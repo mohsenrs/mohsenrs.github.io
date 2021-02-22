@@ -338,7 +338,7 @@
       data: function () {
         return {
           showDetails: !1,
-          uri: "https://mohsenrs.github.io/data/db.json/" + this.project.id,
+          uri: "/data/db.json/" + this.project.id,
         };
       },
       methods: {
@@ -387,7 +387,7 @@
         },
         mounted: function () {
           var e = this;
-          fetch("https://mohsenrs.github.io/data/db.json")
+          fetch("/data/db.json")
             .then(function (e) {
               return e.json();
             })
@@ -490,7 +490,7 @@
               details: this.details,
               complete: !1,
             };
-          fetch("https://mohsenrs.github.io/data/db.json", {
+          fetch("/data/db.json", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
